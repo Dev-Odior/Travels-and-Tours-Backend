@@ -8,6 +8,7 @@ const connectDB = require("./setUpDataBase");
 
 //routes
 const authentication = require("./routes/authentication");
+const tours = require("./routes/tours");
 
 const Config = require("./config");
 
@@ -44,6 +45,7 @@ class StartServer {
 
   routes() {
     app.use("/auth", authentication);
+    app.use("/tours", tours);
   }
 
   errorHandler() {
